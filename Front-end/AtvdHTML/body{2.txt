@@ -1,0 +1,72 @@
+body{
+    background-color:azure;
+}
+
+.titulo{
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    text-decoration: underline;
+    padding-bottom: 0px;
+}
+
+.pedro{
+    display: flex;
+    justify-content: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-style: oblique;
+}
+
+#amostra{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+    border-style: dashed;
+    border-width: 25px;
+    border-radius: 0px;
+    border-color: cadetblue;
+    padding: 35px;
+    margin-bottom: 25px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+#mainParagrafo{
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: yellow;
+}
+
+.mid-bottom{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: aliceblue;
+    border-style: double;
+    border-radius: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: 700px;
+    margin-right: 700px;
+}
+
+.container-seletor{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.seletor-text{
+    font-size: 20px;
+    padding-right: 10px;
+}
+
+#texto{
+    width: 250px;
+    height: 150px;
+}
+
+.container-button{
+     display: flex;
+    justify-content: center; /* centraliza horizontal */
+    align-items: center;     /* centraliza vertical */
+}
