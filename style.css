@@ -1,0 +1,194 @@
+/* =========================
+   CONFIGURAÇÕES GERAIS
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #222;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   CABEÇALHO
+========================= */
+
+header {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 18px;
+}
+
+
+/* =========================
+   CONTEÚDO PRINCIPAL
+========================= */
+
+main {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+
+/* =========================
+   SEÇÕES
+========================= */
+
+section {
+    background-color: white;
+    padding: 30px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+section h2 {
+    margin-bottom: 15px;
+    color: #222;
+}
+
+section p {
+    margin-bottom: 10px;
+}
+
+
+/* =========================
+   PROJETOS
+========================= */
+
+ul {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 20px;
+}
+
+li h3 {
+    margin-bottom: 5px;
+}
+
+
+/* =========================
+   LINKS
+========================= */
+
+a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================
+   RODAPÉ
+========================= */
+
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+li a {
+    color: #222;
+    text-decoration: none;
+}
+
+li a:hover {
+    color: #0066cc;
+}
+
+.projetos {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* =========================
+   PROJETOS
+========================= */
+
+.projetos-title{
+    display: flex;
+    justify-content: center;
+}
+
+.projetos {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.projeto {
+    flex: 1;
+    min-width: 220px;
+
+    background-color: #181818;
+    color: #fff;
+
+    padding: 25px;
+    border-radius: 10px;
+
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+.projeto:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+.projeto h3 {
+    margin-bottom: 10px;
+}
+
+.projeto p {
+    color: #ddd;
+}
+
+
+/* =========================
+   TECNOLOGIAS
+========================= */
+
+.tecnologias {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+.tecnologias span {
+    background-color: white;
+    color: #181818;
+
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 13px;
+}
+
+    
