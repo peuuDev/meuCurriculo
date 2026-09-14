@@ -8,6 +8,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
@@ -23,17 +27,66 @@ body {
 header {
     background-color: #222;
     color: white;
-    text-align: center;
-    padding: 50px 20px;
 }
 
-header h1 {
-    font-size: 36px;
+
+/* =========================
+   MENU
+========================= */
+
+nav {
+    max-width: 1100px;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px;
+}
+
+nav h2 {
+    font-size: 24px;
+}
+
+
+/* =========================
+   LINKS DO MENU
+========================= */
+
+.menu {
+    display: flex;
+    gap: 25px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu a:hover {
+    color: #aaa;
+}
+
+
+/* =========================
+   APRESENTAÇÃO
+========================= */
+
+.apresentacao {
+    text-align: center;
+    padding: 70px 20px;
+}
+
+.apresentacao h1 {
+    font-size: 42px;
     margin-bottom: 10px;
 }
 
-header p {
-    font-size: 18px;
+.apresentacao p {
+    font-size: 20px;
+    color: #ccc;
 }
 
 
@@ -54,15 +107,17 @@ main {
 
 section {
     background-color: white;
+
     padding: 30px;
     margin-bottom: 25px;
+
     border-radius: 10px;
+
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 section h2 {
     margin-bottom: 15px;
-    color: #222;
 }
 
 section p {
@@ -74,16 +129,93 @@ section p {
    PROJETOS
 ========================= */
 
+.projetos {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+
+/* =========================
+   CARD DO PROJETO
+========================= */
+
+.projeto {
+    flex: 1;
+    min-width: 220px;
+
+    background-color: #181818;
+    color: white;
+
+    padding: 25px;
+
+    border-radius: 10px;
+
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+
+/* =========================
+   EFEITO AO PASSAR O MOUSE
+========================= */
+
+.projeto:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+
+.projeto h3 {
+    margin-bottom: 10px;
+}
+
+
+.projeto p {
+    color: #ddd;
+}
+
+
+/* =========================
+   TECNOLOGIAS DOS PROJETOS
+========================= */
+
+.tecnologias {
+    display: flex;
+
+    gap: 8px;
+
+    flex-wrap: wrap;
+
+    margin-top: 15px;
+}
+
+
+.tecnologias span {
+    background-color: white;
+    color: #181818;
+
+    padding: 5px 10px;
+
+    border-radius: 5px;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   LISTAS
+========================= */
+
 ul {
     padding-left: 20px;
 }
 
 li {
-    margin-bottom: 20px;
-}
-
-li h3 {
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 
@@ -93,11 +225,11 @@ li h3 {
 
 a {
     color: #0066cc;
-    text-decoration: none;
 }
 
-a:hover {
-    text-decoration: underline;
+.menu a,
+.projeto {
+    text-decoration: none;
 }
 
 
@@ -107,88 +239,167 @@ a:hover {
 
 footer {
     background-color: #222;
+
     color: white;
+
     text-align: center;
+
     padding: 25px;
-}
-
-li a {
-    color: #222;
-    text-decoration: none;
-}
-
-li a:hover {
-    color: #0066cc;
-}
-
-.projetos {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
 }
 
 /* =========================
-   PROJETOS
+   HABILIDADES
 ========================= */
 
-.projetos-title{
+.habilidades {
     display: flex;
-    justify-content: center;
-}
 
-.projetos {
-    display: flex;
     gap: 20px;
+
     flex-wrap: wrap;
+
 }
 
-.projeto {
+.habilidade {
     flex: 1;
-    min-width: 220px;
 
-    background-color: #181818;
-    color: #fff;
+    min-width: 400px;
 
-    padding: 25px;
+    background-color: rgb(217, 217, 217);
+
+    color: #181818;
+
+    padding: 20px;
+
     border-radius: 10px;
 
-    text-decoration: none;
+    transition: 0.3s;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.habilidade:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.habilidade::before {
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    right: -30px;
+    bottom: -30px;
+
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    opacity: 0.12;
+
+    z-index: 0;
 
     transition: 0.3s;
 }
 
-.projeto:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+.habilidade.java::before {
+    width: 170px;
+    height: 200px;
+    transform: translateY(-5px);
+    background-image: url("img/java.png");
 }
 
-.projeto h3 {
-    margin-bottom: 10px;
+.habilidade.javascript::before {
+    width: 500px;
+    left: 490px;
+    background-image: url("img/js.png");
 }
 
-.projeto p {
-    color: #ddd;
+.habilidade.html::before {
+    width: 300px;
+    top: -30px;
+    left: 610px;
+    background-image: url("img/html.png");
 }
 
+.habilidade.css::before {
+    width: 300px;
+    top: -30px;
+    left: 610px;
+    background-image: url("img/css.png");
+}
+
+.habilidade.git::before {
+    height: 160px;
+    right: -20px;
+    background-image: url("img/git.png");
+}
+
+.habilidade.github::before {
+    background-image: url("img/github.png");
+}
+
+.habilidade h3,
+.habilidade p {
+    position: relative;
+    z-index: 1;
+}
+
+.habilidade:hover::before {
+    opacity: 0.18;
+    transform: rotate(-20deg) scale(1.1);
+}
 
 /* =========================
-   TECNOLOGIAS
+   RESPONSIVIDADE
 ========================= */
 
-.tecnologias {
-    display: flex;
-    gap: 8px;
-    flex-wrap: wrap;
-    margin-top: 15px;
+@media (max-width: 600px) {
+
+    nav {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+
+    .menu {
+        gap: 15px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+
+    .apresentacao h1 {
+        font-size: 30px;
+    }
+
+
+    .apresentacao p {
+        font-size: 17px;
+    }
+
+
+    main {
+        margin: 20px auto;
+    }
+
+
+    section {
+        padding: 20px;
+    }
+
+
+    .projetos {
+        flex-direction: column;
+    }
+
 }
-
-.tecnologias span {
-    background-color: white;
-    color: #181818;
-
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 13px;
-}
-
-    

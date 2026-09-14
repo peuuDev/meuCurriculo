@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,21 +8,39 @@
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 
-    <title>Pedro Ramos | Currículo</title>
+    <title>Pedro Ramos | Portfólio</title>
 </head>
 
 <body>
 
     <header>
-        <div>
-            <h1>Seja bem-vindo ao meu currículo</h1>
-            <p>Analista e Desenvolvedor de Sistemas</p>
+
+        <nav>
+            <h2>Bem-vindo ao meu portfólio</h2>
+
+            <div class="menu">
+                <a href="#sobre">Sobre</a>
+                <a href="#habilidades">Habilidades</a>
+                <a href="#projetos">Projetos</a>
+                <a href="#contato">Contato</a>
+            </div>
+        </nav>
+
+
+        <div class="apresentacao">
+            <h1>Pedro Ramos</h1>
+
+            <p>
+                Analista e Desenvolvedor de Sistemas
+            </p>
         </div>
+
     </header>
 
     <main>
 
-        <section>
+        <section id="sobre">
+
             <h2>Sobre mim</h2>
 
             <p>
@@ -30,77 +49,144 @@
                 estou cursando o 3º semestre e tenho como objetivo seguir
                 minha formação na área de Engenharia de Software.
             </p>
+
         </section>
 
-        <section>
-            <h2>Minhas habilidades</h2>
-
-            <p>
-                Possuo conhecimentos em Java e JavaScript, além de
-                HTML e CSS. Tenho experiência no desenvolvimento de
-                projetos utilizando programação orientada a objetos,
-                lógica de programação e desenvolvimento web.
-            </p>
-
-            <p>
-                Também possuo diversos projetos disponíveis no meu
-                GitHub para visualização.
-            </p>
-        </section>
-
+        <section id="habilidades">
         
-        <section class="projetos-card">
-            <h2 class="projetos-title">Projetos</h2>
+            <h2>Minhas habilidades</h2>
+        
+            <p>
+                Possuo conhecimentos em desenvolvimento de software,
+                programação e desenvolvimento web.
+            </p>
+        
+            <div class="habilidades">
+        
+                <div class="habilidade java">
+                    <h3>Java</h3>
+                    <p>
+                        POO, Collections, lógica de programação e
+                        desenvolvimento de aplicações.
+                    </p>
+                </div>
+        
+                <div class="habilidade javascript">
+                    <h3>JavaScript</h3>
+                    <p>
+                        Manipulação do DOM, eventos, funções e
+                        consumo de APIs.
+                    </p>
+                </div>
+        
+                <div class="habilidade html">
+                    <h3>HTML</h3>
+                    <p>
+                        Estruturação semântica de páginas e
+                        desenvolvimento de interfaces web.
+                    </p>
+                </div>
+        
+                <div class="habilidade css">
+                    <h3>CSS</h3>
+                    <p>
+                        Estilização, Flexbox, responsividade,
+                        layouts e animações.
+                    </p>
+                </div>
+        
+                <div class="habilidade git">
+                    <h3>Git</h3>
+                    <p>
+                        Controle de versão, commits, branches
+                        e gerenciamento de projetos.
+                    </p>
+                </div>
+        
+                <div class="habilidade github">
+                    <h3>GitHub</h3>
+                    <p>
+                        Versionamento de projetos e criação
+                        de portfólio.
+                    </p>
+                </div>
+        
+            </div>
+        
+        </section>
+
+        <section id="projetos">
+
+            <h2>Projetos</h2>
+
             <div class="projetos">
-            
-                <a href="https://github.com/peuuDev/bibliotecaJava.git" target="_blank" class="projeto">
+
+                <a href="https://github.com/peuuDev/bibliotecaJava.git"
+                   target="_blank"
+                   class="projeto">
+
                     <h3>Biblioteca Java</h3>
-            
+
                     <p>
                         Sistema de gerenciamento de biblioteca desenvolvido
-                        em Java utilizando conceitos de POO.
+                        em Java utilizando conceitos de Programação Orientada
+                        a Objetos.
                     </p>
-            
+
                     <div class="tecnologias">
                         <span>Java</span>
                         <span>POO</span>
                         <span>ArrayList</span>
                     </div>
+
                 </a>
-                
-                <a href="https://github.com/peuuDev/bancoJava.git" target="_blank" class="projeto">
+
+                <a href="https://github.com/peuuDev/bancoJava.git"
+                   target="_blank"
+                   class="projeto">
+
                     <h3>ATM Java</h3>
-                
+
                     <p>
-                        Simulação de um caixa eletrônico em Java,
-                        envolvendo autenticação, saque e depósito.
+                        Projeto de simulação de um caixa eletrônico
+                        desenvolvido em Java, envolvendo autenticação,
+                        saque e depósito.
                     </p>
-                
+
                     <div class="tecnologias">
                         <span>Java</span>
                         <span>POO</span>
                         <span>Lógica</span>
                     </div>
+
                 </a>
 
-                <a href="https://github.com/peuuDev/restauranteJava.git" target="_blank" class="projeto">
+                <a href="https://github.com/peuuDev/restauranteJava.git"
+                   target="_blank"
+                   class="projeto">
+
                     <h3>Restaurante Java</h3>
-                
+
                     <p>
-                        Algoritmo simulador de um restaurante,
-                        permitindo cadastrar clientes, mesas e reservas.
+                        Algoritmo desenvolvido em Java para simular o
+                        funcionamento de um restaurante, permitindo
+                        cadastrar clientes, mesas e reservas.
                     </p>
-                
+
                     <div class="tecnologias">
                         <span>Java</span>
                         <span>POO</span>
                         <span>Collections</span>
                     </div>
+
                 </a>
+
             </div>
+
         </section>
 
-        <section>
+        <section id="contato">
+
             <h2>Contatos</h2>
 
             <p>
@@ -108,6 +194,7 @@
             </p>
 
             <ul>
+
                 <li>
                     Gmail:
                     <a href="mailto:xxx@gmail.com">
@@ -123,28 +210,33 @@
                 </li>
 
                 <li>
-                    GitHub:
-                    <a href="https://github.com/peuuDev" target="_blank">
-                        github.com/peuuDev
-                    </a>
-                </li>
-
-                <li>
                     Discord:
                     xxx
                 </li>
 
+                <li>
+                    GitHub:
+                    <a href="https://github.com/peuuDev"
+                       target="_blank">
+                        github.com/peuuDev
+                    </a>
+                </li>
+
             </ul>
+
         </section>
 
     </main>
 
     <footer>
+
         <p>
             Pedro Ramos<br>
             Currículo / Portfólio
         </p>
+
     </footer>
 
 </body>
+
 </html>
