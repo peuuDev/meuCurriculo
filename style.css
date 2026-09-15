@@ -154,6 +154,10 @@ section p {
     text-decoration: none;
 
     transition: 0.3s;
+
+    display: flex;
+
+    flex-direction: column;
 }
 
 
@@ -188,21 +192,32 @@ section p {
 
     gap: 8px;
 
-    flex-wrap: wrap;
-
-    margin-top: 15px;
+    margin-top: auto;
+    justify-content: center;
 }
 
 
 .tecnologias span {
     background-color: white;
     color: #181818;
-
+    
     padding: 5px 10px;
-
+    
     border-radius: 5px;
 
     font-size: 13px;
+    
+    white-space: nowrap;
+
+    transition: 0.25s;
+}
+
+.tecnologias span:hover{
+
+    transform: translateY(-2px);
+
+    box-shadow:
+    0 2px 18px rgb(248, 246, 246);
 }
 
 
@@ -355,6 +370,46 @@ footer {
 .habilidade:hover::before {
     opacity: 0.18;
     transform: rotate(-20deg) scale(1.1);
+}
+/* =========================
+    BOTAO TOPO
+========================= */
+
+#btnTopo{
+    position: fixed;
+
+    bottom: 25px;
+    right: 25px;
+
+    width: 45px;
+    height: 45px;
+
+    border: none;
+    border-radius: 50%;
+
+    background-color: #181818;
+    color: white;
+    
+    font-size: 20px;
+
+    cursor: pointer;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: 0.3s;
+}
+
+#btnTopo:hover{
+    transform: translateY(-3px);
+
+    box-shadow: 
+    0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+#btnTopo.visivel{
+    opacity: 1;
+    visibility: visible;
 }
 
 /* =========================
