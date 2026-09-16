@@ -88,7 +88,48 @@ nav h2 {
     font-size: 20px;
     color: #ccc;
 }
+/* =========================
+    SOBRE
+========================= */
 
+#btnSobre{
+    font-size: 18px;
+    background-color: #222;
+    color: #f4f4f4;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 150px;
+    height: 35px;
+    font-family: inherit;
+    transition: 0.15s;
+    border: none;
+}
+
+#btnSobre:hover{
+    transform: translateX(5px);
+    
+    box-shadow: 
+    0 5px 15px rgba(0, 0, 0, 0.3);
+
+}
+
+#btnSobre::before {
+    content: "▲";
+    display: inline-block;
+    margin-right: 5px;
+
+    transform: rotate(0deg);
+
+    transition: 0.3s;
+}
+
+#btnSobre.estado2::before {
+    transform: rotate(90deg);
+}
+
+#btnSobre.estado3::before {
+    transform: rotate(180deg);
+}
 
 /* =========================
    CONTEÚDO PRINCIPAL
