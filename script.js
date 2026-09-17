@@ -27,12 +27,12 @@ const btnSobre = document.querySelector("#btnSobre");
 let estado = 1;
 
 btnSobre.addEventListener("mouseenter", () => {
-
+    
     if (estado === 1) {
         estado = 2;
         btnSobre.classList.add("estado2");
     }
-
+    
 });
 
 btnSobre.addEventListener("mouseleave", () => {
@@ -42,6 +42,8 @@ btnSobre.addEventListener("mouseleave", () => {
     }
 })
 
+//Estado 3 recebe duas alterações: btnSobre: triangulo virado 180°; cardSobre: recebe o estado aberto 
+const cardSobre = document.querySelector("#cardSobre");
 btnSobre.addEventListener("click", () => {
 
     if (estado === 2) {
@@ -51,12 +53,15 @@ btnSobre.addEventListener("click", () => {
         btnSobre.classList.remove("estado2");
         btnSobre.classList.add("estado3");
 
+        cardSobre.classList.add("aberto");
+        
     } else if (estado === 3) {
 
         estado = 1;
 
         btnSobre.classList.remove("estado3");
 
+        cardSobre.classList.remove("aberto");
     }
 
 });

@@ -89,27 +89,106 @@ nav h2 {
     color: #ccc;
 }
 /* =========================
-    SOBRE
+SOBRE
 ========================= */
 
+#sobre {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: #222;
+
+    overflow: visible;
+}
+
+#cardSobre {
+    width: 900px;
+
+    max-height: 0;
+    opacity: 0;
+
+    overflow: hidden;
+
+    display: flex;
+    gap: 30px;
+
+    background-color: #f4f4f4;
+    color: #222;
+
+    border-radius: 10px;
+
+    transition:
+        width 0.5s ease,
+        max-height 0.5s ease,
+        opacity 0.3s ease;
+}
+
+#cardSobre.aberto {
+    width: 1200px;
+
+    max-height: 500px;
+    opacity: 1;
+
+    padding: 30px;
+}
+
+.fotoSobre {
+    flex: 0 0 200px;
+    width: 200px;
+    height: 340px;
+
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.fotoSobre img {
+    width: 200px;
+    height: 340px;
+
+    object-fit: cover;
+
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    transform: scale(1.5);
+}
+
+.infoSobre {
+    flex: 1;
+}
+
+.infoSobre h2 {
+    margin-bottom: 15px;
+}
+
+.infoSobre p {
+    margin-bottom: 12px;
+}
+
 #btnSobre{
+    justify-content: center;
     font-size: 18px;
     background-color: #222;
     color: #f4f4f4;
     border-radius: 8px;
     cursor: pointer;
-    width: 150px;
+    width: 140px;
     height: 35px;
+    /* margin-bottom: 10px;
+    margin-top: -10px; */
     font-family: inherit;
     transition: 0.15s;
     border: none;
+    text-align: justify;
+    box-shadow: rgb(255, 215, 0);
 }
 
 #btnSobre:hover{
-    transform: translateX(5px);
+    transform: translateY(-3px);
     
     box-shadow: 
-    0 5px 15px rgba(0, 0, 0, 0.3);
+    0 1px 25px rgb(255, 255, 255);
 
 }
 
@@ -117,7 +196,7 @@ nav h2 {
     content: "▲";
     display: inline-block;
     margin-right: 5px;
-
+    margin-left: 6px;
     transform: rotate(0deg);
 
     transition: 0.3s;
@@ -129,14 +208,16 @@ nav h2 {
 
 #btnSobre.estado3::before {
     transform: rotate(180deg);
+    
 }
+
 
 /* =========================
    CONTEÚDO PRINCIPAL
 ========================= */
 
 main {
-    max-width: 900px;
+    max-width: 1200px;
     margin: 40px auto;
     padding: 0 20px;
 }
@@ -367,33 +448,35 @@ footer {
 
 .habilidade.java::before {
     width: 170px;
-    height: 200px;
+    height: 208px;
+    left: 280px;
     transform: translateY(-5px);
     background-image: url("img/java.png");
 }
 
 .habilidade.javascript::before {
-    width: 500px;
-    left: 490px;
+    width: 600px;
+    height: 200px;
+    left: 45px;
     background-image: url("img/js.png");
 }
 
 .habilidade.html::before {
-    width: 300px;
-    top: -30px;
-    left: 610px;
+    width: 350px;
+    top: -20px;
+    left: 208px;
     background-image: url("img/html.png");
 }
 
 .habilidade.css::before {
-    width: 300px;
-    top: -30px;
-    left: 610px;
+    width: 750px;
+    height: 181px;
+    left: 0px;
     background-image: url("img/css.png");
 }
 
 .habilidade.git::before {
-    height: 160px;
+    height: 185px;
     right: -20px;
     background-image: url("img/git.png");
 }
@@ -452,6 +535,18 @@ footer {
     opacity: 1;
     visibility: visible;
 }
+
+/*===========================
+SETS DE LARGURA E MARGEM DOS CARDS
+===========================*/
+
+#habilidades,
+#projetos,
+#contato {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+} 
 
 /* =========================
    RESPONSIVIDADE
