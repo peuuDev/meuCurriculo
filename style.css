@@ -14,7 +14,7 @@ html {
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background: linear-gradient(170deg, #000000, #f4f4f4);
     color: #222;
     line-height: 1.6;
 }
@@ -25,11 +25,16 @@ body {
 ========================= */
 
 header {
-    background-color: #222;
-    color: white;
+    /* background-color: #222; */
+    color: rgb(255, 255, 255), ;
 }
 
-
+header h2{
+    background: linear-gradient(180deg, white, rgb(191, 191, 191));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
 /* =========================
    MENU
 ========================= */
@@ -60,7 +65,10 @@ nav h2 {
 }
 
 .menu a {
-    color: white;
+    background: linear-gradient(180deg, white, rgb(191, 191, 191));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
     text-decoration: none;
     font-weight: bold;
 }
@@ -79,6 +87,14 @@ nav h2 {
     padding: 70px 20px;
 }
 
+.apresentacao h1,
+.apresentacao p {
+    background: linear-gradient(90deg, white, rgb(191, 191, 191));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
 .apresentacao h1 {
     font-size: 42px;
     margin-bottom: 10px;
@@ -86,13 +102,17 @@ nav h2 {
 
 .apresentacao p {
     font-size: 20px;
-    color: #ccc;
 }
 /* =========================
 SOBRE
 ========================= */
 
 #sobre {
+    width: 900px;
+    max-width: 100%;
+    
+    margin-left: auto;
+    margin-right: auto;
 
     display: flex;
     flex-direction: column;
@@ -101,14 +121,20 @@ SOBRE
     background-color: #222;
 
     overflow: visible;
+
+    transition: width 0.5s ease;
+}
+
+#sobre.aberto {
+    width: 1200px;
 }
 
 #cardSobre {
     width: 900px;
-
+    
     max-height: 0;
-    opacity: 0;
 
+    opacity: 0;
     overflow: hidden;
 
     display: flex;
@@ -126,12 +152,14 @@ SOBRE
 }
 
 #cardSobre.aberto {
-    width: 1200px;
+    width: 1100px;
 
     max-height: 500px;
     opacity: 1;
 
     padding: 30px;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 .fotoSobre {
@@ -148,10 +176,12 @@ SOBRE
     height: 340px;
 
     object-fit: cover;
+    object-position: 30% center;
 
     border-radius: 10px;
     transition: transform 0.3s ease;
-    transform: scale(1.5);
+    transform: scale(1);
+    
 }
 
 .infoSobre {
@@ -216,11 +246,10 @@ SOBRE
    CONTEÚDO PRINCIPAL
 ========================= */
 
-main {
-    max-width: 1200px;
+/* main {
     margin: 40px auto;
     padding: 0 20px;
-}
+} */
 
 
 /* =========================
@@ -229,7 +258,7 @@ main {
 
 section {
     background-color: white;
-
+    
     padding: 30px;
     margin-bottom: 25px;
 
@@ -553,6 +582,12 @@ SETS DE LARGURA E MARGEM DOS CARDS
 ========================= */
 
 @media (max-width: 600px) {
+
+    #cardSobre,
+    #cardSobre.aberto {
+        width: 100%;
+        max-width: 100%;
+    }
 
     nav {
         flex-direction: column;
