@@ -118,7 +118,9 @@ SOBRE
     flex-direction: column;
     align-items: center;
 
-    background-color: #222;
+    background: linear-gradient(150deg,
+    #222 50%,
+    white);
 
     overflow: visible;
 
@@ -126,7 +128,7 @@ SOBRE
 }
 
 #sobre.aberto {
-    width: 1200px;
+    width: 1400px;
 }
 
 #cardSobre {
@@ -137,24 +139,32 @@ SOBRE
     opacity: 0;
     overflow: hidden;
 
-    display: flex;
-    gap: 30px;
+    display: grid;
+    gap: 20px;
 
     background-color: #f4f4f4;
     color: #222;
 
     border-radius: 10px;
+    display: flex;
+    
 
     transition:
         width 0.5s ease,
         max-height 0.5s ease,
         opacity 0.3s ease;
+
+    
 }
 
 #cardSobre.aberto {
-    width: 1100px;
+    display: grid;
+    grid-template-columns: 200px minmax(0, 1fr);
+    grid-template-rows: auto auto;
+    width: 1300px;
+    overflow: visible;
 
-    max-height: 500px;
+    max-height: 3000px;
     opacity: 1;
 
     padding: 30px;
@@ -166,6 +176,13 @@ SOBRE
     flex: 0 0 200px;
     width: 200px;
     height: 340px;
+
+    grid-column: 1;
+    grid-row: 1;
+
+    /* position: sticky; */
+    top: 20px;
+    align-self: flex-start;
 
     overflow: hidden;
     border-radius: 10px;
@@ -185,7 +202,9 @@ SOBRE
 }
 
 .infoSobre {
-    flex: 1;
+    grid-column: 2;
+    grid-row: 1;
+    min-width: 0;
 }
 
 .infoSobre h2 {
@@ -194,6 +213,29 @@ SOBRE
 
 .infoSobre p {
     margin-bottom: 12px;
+}
+
+#paragrafo1{
+    display: flex;
+    font-size: 20px;
+    gap: 35px;
+    flex-wrap: wrap;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 40px;
+}
+
+#paragrafo2{
+    grid-column: 1 / -1;
+    grid-row: 2;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+#paragrafo2 h1{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10px;
 }
 
 #btnSobre{
