@@ -47,7 +47,7 @@ const cardSobre = document.querySelector("#cardSobre");
 const sobre = document.querySelector("#sobre");
 btnSobre.addEventListener("click", () => {
 
-    if (estado === 2) {
+    if (estado === 1 || estado === 2) {
 
         estado = 3;
 

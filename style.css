@@ -26,7 +26,7 @@ body {
 
 header {
     /* background-color: #222; */
-    color: rgb(255, 255, 255), ;
+    color: rgb(255, 255, 255);
 }
 
 header h2{
@@ -93,6 +93,7 @@ nav h2 {
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
+    font-weight: bold;
 }
 
 .apresentacao h1 {
@@ -104,13 +105,13 @@ nav h2 {
     font-size: 20px;
 }
 /* =========================
-SOBRE
+   SOBRE
 ========================= */
 
 #sobre {
     width: 900px;
     max-width: 100%;
-    
+
     margin-left: auto;
     margin-right: auto;
 
@@ -118,53 +119,46 @@ SOBRE
     flex-direction: column;
     align-items: center;
 
-    background: linear-gradient(150deg,
-    #222 50%,
-    white);
-
-    overflow: visible;
+    background: linear-gradient(150deg, #222 40%, white);
 
     transition: width 0.5s ease;
 }
 
 #sobre.aberto {
-    width: 1400px;
+    width: 1100px;
 }
 
+
+/* =========================
+   CARD SOBRE
+========================= */
+
 #cardSobre {
-    width: 900px;
-    
+    width: 90%;
     max-height: 0;
 
     opacity: 0;
     overflow: hidden;
 
-    display: grid;
-    gap: 20px;
-
     background-color: #f4f4f4;
     color: #222;
 
-    border-radius: 10px;
-    display: flex;
-    
+    border-radius: 12px;
 
     transition:
-        width 0.5s ease,
         max-height 0.5s ease,
         opacity 0.3s ease;
 
-    
 }
 
-#cardSobre.aberto {
-    display: grid;
-    grid-template-columns: 200px minmax(0, 1fr);
-    grid-template-rows: auto auto;
-    width: 1300px;
-    overflow: visible;
 
-    max-height: 3000px;
+/* =========================
+   CARD ABERTO
+========================= */
+
+#cardSobre.aberto {
+    max-height: 1000px;
+
     opacity: 1;
 
     padding: 30px;
@@ -172,71 +166,94 @@ SOBRE
     margin-bottom: 15px;
 }
 
+
+/* =========================
+   PARTE PRINCIPAL
+========================= */
+
+.sobrePrincipal {
+    display: flex;
+
+    gap: 30px;
+
+    align-items: flex-start;
+}
+
+
+/* =========================
+   FOTO
+========================= */
+
 .fotoSobre {
-    flex: 0 0 200px;
+    flex: 0 0 210px;
+
     width: 200px;
     height: 340px;
 
-    grid-column: 1;
-    grid-row: 1;
-
-    /* position: sticky; */
-    top: 20px;
-    align-self: flex-start;
-
     overflow: hidden;
+
     border-radius: 10px;
 }
 
 .fotoSobre img {
-    width: 200px;
-    height: 340px;
+    width: 100%;
+    height: 100%;
 
     object-fit: cover;
     object-position: 30% center;
 
     border-radius: 10px;
+
     transition: transform 0.3s ease;
-    transform: scale(1);
-    
 }
 
+
+/* =========================
+   INFORMAÇÕES
+========================= */
+
 .infoSobre {
-    grid-column: 2;
-    grid-row: 1;
+    flex: 1;
     min-width: 0;
 }
 
-.infoSobre h2 {
+.infoSobre h1 {
+    margin-bottom: 20px;
+}
+
+
+/* =========================
+   TEXTOS
+========================= */
+
+#paragrafo1 {
+    font-size: 18px;
+}
+
+#paragrafo1 p {
     margin-bottom: 15px;
 }
 
-.infoSobre p {
-    margin-bottom: 12px;
+
+/* =========================
+   OBJETIVOS
+========================= */
+
+#paragrafo2 {
+    margin-top: 30px;
+    padding-top: 25px;
+
+    border-top: 1px solid #ccc;
+
+    font-size: 18px;
 }
 
-#paragrafo1{
-    display: flex;
-    font-size: 20px;
-    gap: 35px;
-    flex-wrap: wrap;
-    font-family: Arial, Helvetica, sans-serif;
-    padding-top: 40px;
+#paragrafo2 h1 {
+    margin-bottom: 15px;
 }
 
-#paragrafo2{
-    grid-column: 1 / -1;
-    grid-row: 2;
-    width: 100%;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
-}
 
-#paragrafo2 h1{
-    display: flex;
-    justify-content: center;
-    padding-bottom: 10px;
-}
+
 
 #btnSobre{
     justify-content: center;
@@ -283,17 +300,6 @@ SOBRE
     
 }
 
-
-/* =========================
-   CONTEÚDO PRINCIPAL
-========================= */
-
-/* main {
-    margin: 40px auto;
-    padding: 0 20px;
-} */
-
-
 /* =========================
    SEÇÕES
 ========================= */
@@ -325,7 +331,7 @@ section p {
 .projetos {
     display: flex;
     gap: 20px;
-    flex-wrap: wrap;
+    flex-direction: column;
 }
 
 
@@ -337,7 +343,14 @@ section p {
     flex: 1;
     min-width: 220px;
 
+    min-height: 400px;
+
     background-color: #181818;
+    background-image: url("img/java.png");
+    background-size: 100px;
+    background-repeat: no-repeat;
+    background-position: center 80%;
+    
     color: white;
 
     padding: 25px;
@@ -351,6 +364,8 @@ section p {
     display: flex;
 
     flex-direction: column;
+
+    margin-top: 12px;
 }
 
 
@@ -359,7 +374,7 @@ section p {
 ========================= */
 
 .projeto:hover {
-    transform: translateY(-8px);
+    transform: translateY(-8px) scale(1.05);
 
     box-shadow:
         0 10px 25px rgba(0, 0, 0, 0.25);
@@ -629,6 +644,19 @@ SETS DE LARGURA E MARGEM DOS CARDS
     #cardSobre.aberto {
         width: 100%;
         max-width: 100%;
+    }
+
+    #cardSobre.aberto{
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    #sobre.aberto{
+        width: 300px;
+        max-width: 100%;
+    }
+
+    .habilidade{
+        min-width: auto;
     }
 
     nav {
